@@ -166,6 +166,7 @@ if __name__ == '__main__':
     ]
     for workout_type, data in packages:
         if workout_type not in TRAINING_TYPE:
-            raise KeyError(f'Тренировка типа "{workout_type}" не поддерживается')
+            raise KeyError(
+                f'Тренировка типа "{workout_type}" не поддерживается')
         training = read_package(workout_type, data)
         main(training)
